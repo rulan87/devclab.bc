@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int gcd(int a, int b) {
+    if ( a % b == 0 ) {
+        return b;
+    }
+    return gcd(b, a%b);
+}
+
+int main() {
+    FILE *in = fopen("task.in", "r");
+    FILE *out = fopen("task.out", "w");
+    int a, b, c, lcm;
+    
+    fscanf(in, "%d%d", &a, &b);
+    fclose(in);
+    c = a * b;
+    lcm = gcd(a, b);
+    fprintf(out, "%d\n", c/lcm);
+    
+    fclose(out);
+    
+    return 0;
+}
+
