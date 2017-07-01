@@ -7,10 +7,10 @@ int main() {
     
     scanf("%d %d", &away, &home);
     
-    if ( away > home ) {
-        printf("Away team wins\n");
-    } else if ( away < home ) {
+    if ( away < home ) {
         printf("Home team wins\n");
+    } else if ( away > home ) {
+        printf("Away team wins\n");
     } else if ( away == home ) {
         printf("Draw\n");
     }

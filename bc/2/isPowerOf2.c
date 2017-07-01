@@ -7,23 +7,16 @@
 
 #include <stdio.h>
 
-int powerOf2(int exponent) {
-    return 1 << exponent;
-}
-
 int main() {
-    int number;
-    int i;
+    int x;
     
-    scanf("%d", &number);
+    scanf("%d", &x);
     
-    for ( i = number; i > 0 ; i >> 1 );
-        
-    if ( i == 1 ) {
-        printf("yes\n");
+    if ( x & (x - 1 ) == 0) {
+        printf("yes\n", );
     } else {
         printf("no\n");
     }
-    
     return 0;
 }
+
